@@ -8,7 +8,7 @@ Resolution <- as.numeric(args[4])
 sprintf("Input data = %s", DATA_PATH)
 sprintf("Output = %s", RESULT_PATH)
 
-library(msir, lib="/hpf/largeprojects/pmaass/Signature/pipeline/signature/scr/Rlib-4.2.1")
+library(msir)
 library(dplyr)
 library(parallel) 
 library(MASS) 
@@ -637,3 +637,4 @@ numCoresY <- detectCores()
 sprintf("core number is %s", numCoresY)
 mclapply(anchor_chromosomes, trans_crossY, mc.cores = numCoresY)
 #lapply(anchor_chromosomes, trans_crossY)
+
